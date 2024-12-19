@@ -21,3 +21,12 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+public/upload/kontrak/hasil/.
+public/upload/assets/.
+public/upload/.
+public/upload/users/*
+public/upload/users/.
+public/upload/assets/*
+public/upload/kontrak/hasil/*
+public/upload/dokumen_pph23/*
