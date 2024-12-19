@@ -39,5 +39,7 @@
     Route::get('cart/data',[CartController::class,'data'])->name('front.cart.data');
     Route::put('cart/update-jumlah',[CartController::class,'updateJumlah'])->name('front.cart.updateJumlah');
     Route::delete('cart/delete',[CartController::class,'delete'])->name('front.cart.delete');
+    
+    Route::delete('cart/send-invoice',[CartController::class,'sendInvoice'])->name('front.cart.sendInvoice');
 
 

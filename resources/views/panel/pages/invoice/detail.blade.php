@@ -157,9 +157,9 @@
                                             <strong>{{ $datainvoice['user']['name'] }}</strong>
                                             <br>
                                             {{ $datainvoice->negara }},
+                                            {{ $datainvoice->province }},
                                             {{ $datainvoice->kota }},
                                             {{ $datainvoice->kecamatan }},
-                                            {{ $datainvoice->kelurahan }},
                                             {{ $datainvoice->alamat }}<br>
                                             Phone:
                                             {{ $datainvoice['user']['telp'] }}<br>
@@ -252,8 +252,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th>Ongkir</th>
-                                                    <td>
-                                                        {{ number_format($datainvoice->ongkir,0,'.',',') }}</td>
+                                                    <td>({{ $datainvoice->jenis_pengiriman }}) {{ number_format($datainvoice->ongkir,0,'.',',') }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Total:</th>

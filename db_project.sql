@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Waktu pembuatan: 19 Des 2024 pada 13.40
+-- Waktu pembuatan: 19 Des 2024 pada 14.23
 -- Versi server: 8.0.40
 -- Versi PHP: 8.2.21
 
@@ -226,7 +226,7 @@ CREATE TABLE `invoice` (
   `province` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kota` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `kecamatan` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `kelurahan` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jenis_pengiriman` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alamat` text COLLATE utf8mb4_unicode_ci,
   `status` int DEFAULT '0',
   `bukti_transfer` text COLLATE utf8mb4_unicode_ci,
@@ -239,8 +239,8 @@ CREATE TABLE `invoice` (
 -- Dumping data untuk tabel `invoice`
 --
 
-INSERT INTO `invoice` (`id`, `users_id`, `negara`, `province`, `kota`, `kecamatan`, `kelurahan`, `alamat`, `status`, `bukti_transfer`, `created_at`, `updated_at`, `ongkir`) VALUES
-(1, 5, 'Indonesia', 'Banten', 'Tangerang Selatan', 'Pondok Aren', 'Jurang Mangu Barat', '-', 4, '/upload/barang/bukti_transfer/bukti_transfer_1734596053.pdf', '2024-12-19 12:31:02', '2024-12-19 12:57:06', 10000);
+INSERT INTO `invoice` (`id`, `users_id`, `negara`, `province`, `kota`, `kecamatan`, `jenis_pengiriman`, `alamat`, `status`, `bukti_transfer`, `created_at`, `updated_at`, `ongkir`) VALUES
+(1, 5, 'Indonesia', 'Banten', 'Tangerang Selatan', 'Pondok Aren', 'Regular', '-', 4, '/upload/barang/bukti_transfer/bukti_transfer_1734596053.pdf', '2024-12-19 12:31:02', '2024-12-19 12:57:06', 10000);
 
 -- --------------------------------------------------------
 
@@ -330,7 +330,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (39, '2024_12_18_105625_create_ongkir_table', 2),
 (40, '2024_12_19_034605_add_level_users', 3),
 (41, '2024_12_19_070145_change_invoice_table', 4),
-(43, '2024_12_19_131847_add_invoice_ongkir', 5);
+(43, '2024_12_19_131847_add_invoice_ongkir', 5),
+(44, '2024_12_19_132929_remove_add_invoice', 6);
 
 -- --------------------------------------------------------
 
@@ -22391,7 +22392,7 @@ ALTER TABLE `invoice_detail`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT untuk tabel `ongkir`

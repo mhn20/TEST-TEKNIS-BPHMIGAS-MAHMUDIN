@@ -15,7 +15,7 @@ class RemoveAddInvoice extends Migration
     {
         Schema::table('invoice', function (Blueprint $table) {
             if (!Schema::hasColumn('invoice', 'jenis_pengiriman')) {
-                $table->double('jenis_pengiriman')->nullable();
+                $table->string('jenis_pengiriman',50)->nullable()->after('kecamatan');
             }
             if (Schema::hasColumn('invoice', 'kelurahan')) {
                 $table->dropcolumn('kelurahan');

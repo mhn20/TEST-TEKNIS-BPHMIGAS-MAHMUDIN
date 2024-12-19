@@ -73,8 +73,9 @@
                       <th>Negara</th>
                       <th>Kota</th>
                       <th>Kecamatan</th>
-                      <th>Kelurahan</th>
                       <th>Alamat</th>
+                      <th>Jenis Pengiriman</th>
+                      <th>Ongkir</th>
                       <th>Jumlah Item</th>
                       <th>Subtotal</th>
                     </tr>
@@ -540,8 +541,9 @@
                   <td>${val['negara']}</td>
                   <td>${val['kota']}</td>
                   <td>${val['kecamatan']}</td>
-                  <td>${val['kelurahan']}</td>
                   <td>${val['alamat']}</td>
+                  <td>${val['jenis_pengiriman']}</td>
+                  <td class="text-right">${formatRupiah(val['ongkir'])}</td>
                   <td class="text-center">${val['jumlahitem']}</td>
                   <td class="text-right">${formatRupiah(val['subtotal'])}</td>
                 </tr>

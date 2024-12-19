@@ -9,7 +9,7 @@ class Invoice extends Model
     protected $table = "invoice";
 
     protected $fillable = [
-        'users_id', 'nama', 'negara', 'kota', 'kecamatan', 'kelurahan', 'alamat', 'status', 'bukti_transfer'
+        'users_id', 'nama', 'negara', 'province', 'kota', 'kecamatan', 'invoice', 'ongkir' ,'alamat', 'status', 'bukti_transfer'
     ];
 
     public $timestamps = true;
